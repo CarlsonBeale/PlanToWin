@@ -39,6 +39,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="Log In"/>
                                 <connections>
+                                    <action selector="logInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zhu-hn-8P5"/>
                                     <segue destination="sS7-B7-des" kind="show" id="cpF-V5-E6p"/>
                                 </connections>
                             </button>
@@ -125,7 +126,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="HVm-tG-aWB"/>
                     <connections>
+                        <outlet property="passwordInput" destination="6mO-FE-Psn" id="U0A-OS-ZnH"/>
                         <outlet property="removeText" destination="j2b-tK-ldw" id="ijC-uG-pjb"/>
+                        <outlet property="usernameInput" destination="Bwk-LW-CXk" id="XVG-mB-M0b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -314,7 +317,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dqv-5K-dL0"/>
         <segue reference="2C7-6q-RIr"/>
     </inferredMetricsTieBreakers>
 </document>

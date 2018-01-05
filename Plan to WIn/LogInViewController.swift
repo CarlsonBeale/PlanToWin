@@ -9,13 +9,19 @@
 import UIKit
 
 class LogInViewController: UIViewController {
-
+//  view userdefaults
 //    override func viewDidAppear(_ animated: Bool) {
 //        for (key, value) in UserDefaults.standard.dictionaryRepresentation() {
 //            print("\(key) = \(value) \n")
 //        }
 //    }
     
+    @IBOutlet weak var usernameInput: UIStackView!
+    @IBOutlet weak var passwordInput: UITextField!
+    
+    @IBAction func logInButton(_ sender: Any) {
+        
+    }
     
     @IBAction func Remove(_ sender: Any) {
         let userDefaults = UserDefaults.standard
