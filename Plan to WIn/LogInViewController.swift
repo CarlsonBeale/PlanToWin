@@ -9,12 +9,14 @@
 import UIKit
 
 class LogInViewController: UIViewController {
-//  view userdefaults
-//    override func viewDidAppear(_ animated: Bool) {
-//        for (key, value) in UserDefaults.standard.dictionaryRepresentation() {
-//            print("\(key) = \(value) \n")
-//        }
-//    }
+  //view userdefaults
+    override func viewDidAppear(_ animated: Bool) {
+        for (key, value) in UserDefaults.standard.dictionaryRepresentation() {
+            if key == "logInInfo" || key == "userInfo" {
+                print("\(key) = \(value) \n")
+            }
+        }
+    }
     
     
     @IBOutlet weak var usernameInput: UITextField!
@@ -23,10 +25,16 @@ class LogInViewController: UIViewController {
     
     @IBAction func logInButton(_ sender: Any) {
         if usernameInput.text != "" || passwordInput.text != "" {
-            let userData = UserDefaults.standard.dictionary(forKey: "logInInfo")
-//            if userData[usernameInput.text] == passwordInput.text! {
-//                
-//            }
+            if var userData = UserDefaults.standard.dictionary(forKey: "logInInfo") as? [String: String]{
+                if userData[usernameInput.text!] == passwordInput.text! {
+                    self.performSegue(withIdentifier: "toHomeFromLogIn", sender: sender)
+                }else {
+                    let alert = UIAlertController(title: "Input doesnt match", message: "Wrong username or password", preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
+                
+            }
         }else {
             //creat alert for missing input
             let alert = UIAlertController(title: "Missing Info", message: "One or more fields are blank", preferredStyle: UIAlertControllerStyle.alert)
@@ -39,7 +47,7 @@ class LogInViewController: UIViewController {
     
     @IBAction func Remove(_ sender: Any) {
         let userDefaults = UserDefaults.standard
-        userDefaults.removeObject(forKey: "LogInInfo")
+        userDefaults.removeObject(forKey: "logInInfo")
         userDefaults.removeObject(forKey: "userInfo")
     }
     
