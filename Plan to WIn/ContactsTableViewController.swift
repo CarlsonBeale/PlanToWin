@@ -1,18 +1,17 @@
 //
-//  EventTableViewController.swift
+//  ContactsTableViewController.swift
 //  Plan to WIn
 //
-//  Created by Carlson Beale on 1/2/18.
+//  Created by Carlson Beale on 1/6/18.
 //  Copyright © 2018 StarlightMamba. All rights reserved.
 //
 
 import UIKit
-//Try Realmß
-class EventTableViewController: UITableViewController {
+
+class ContactsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -37,15 +36,19 @@ class EventTableViewController: UITableViewController {
         return 0
     }
 
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
+    
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "cellReuseIdentifier", for: indexPath)
+//        let text = data[indexPath.row]
+//        // Configure the cell...
+//        if var userData = UserDefaults.standard.array(forKey: "userInfo") as? [[String: String]] {
+//            for userArray in userData {
+//                
+//            }
+//        }
+//        return cell
+//    }
+    
 
     /*
     // Override to support conditional editing of the table view.

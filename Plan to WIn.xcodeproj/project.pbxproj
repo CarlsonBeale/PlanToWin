@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8755F1E02001411900E7B38F /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8755F1DF2001411900E7B38F /* ContactsTableViewController.swift */; };
 		875C28431FFC0A5A004402F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875C28421FFC0A5A004402F4 /* AppDelegate.swift */; };
 		875C28451FFC0A5A004402F4 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875C28441FFC0A5A004402F4 /* LogInViewController.swift */; };
 		875C28481FFC0A5A004402F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 875C28461FFC0A5A004402F4 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8755F1DF2001411900E7B38F /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 		875C283F1FFC0A5A004402F4 /* Plan to WIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Plan to WIn.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		875C28421FFC0A5A004402F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		875C28441FFC0A5A004402F4 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				875C28721FFC0EDF004402F4 /* HomeViewController.swift */,
 				875C28741FFC92E8004402F4 /* CreateEventViewController.swift */,
 				875C28761FFC9853004402F4 /* EventTableViewController.swift */,
+				8755F1DF2001411900E7B38F /* ContactsTableViewController.swift */,
 				875C28461FFC0A5A004402F4 /* Main.storyboard */,
 				875C28491FFC0A5A004402F4 /* Assets.xcassets */,
 				875C284B1FFC0A5A004402F4 /* LaunchScreen.storyboard */,
@@ -277,6 +280,7 @@
 				875C28711FFC0E61004402F4 /* SignInViewController.swift in Sources */,
 				875C28771FFC9853004402F4 /* EventTableViewController.swift in Sources */,
 				875C28731FFC0EDF004402F4 /* HomeViewController.swift in Sources */,
+				8755F1E02001411900E7B38F /* ContactsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
