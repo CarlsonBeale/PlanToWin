@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DCD3EA93B53A2E8571F0869 /* Pods_Plan_to_WInTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A8735EDFB0D3D7B18A40D1 /* Pods_Plan_to_WInTests.framework */; };
+		3304F33A2E195DC2935F969F /* Pods_Plan_to_WIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2469F8F70C104D964B4E06E /* Pods_Plan_to_WIn.framework */; };
+		7EC6635106A19F7D364761FC /* Pods_Plan_to_WInUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9F73B5D928CAF4D0F82EAB /* Pods_Plan_to_WInUITests.framework */; };
 		875C28431FFC0A5A004402F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875C28421FFC0A5A004402F4 /* AppDelegate.swift */; };
 		875C28451FFC0A5A004402F4 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875C28441FFC0A5A004402F4 /* LogInViewController.swift */; };
 		875C28481FFC0A5A004402F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 875C28461FFC0A5A004402F4 /* Main.storyboard */; };
@@ -18,6 +21,7 @@
 		875C28731FFC0EDF004402F4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875C28721FFC0EDF004402F4 /* HomeViewController.swift */; };
 		875C28751FFC92E8004402F4 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875C28741FFC92E8004402F4 /* CreateEventViewController.swift */; };
 		875C28771FFC9853004402F4 /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875C28761FFC9853004402F4 /* EventTableViewController.swift */; };
+		BCE4C77720013811002B7ADE /* MKiCloudSync.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE4C77620013811002B7ADE /* MKiCloudSync.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		15A8735EDFB0D3D7B18A40D1 /* Pods_Plan_to_WInTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plan_to_WInTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F1824FFDB60A4D6497ADDCA /* Pods-Plan to WInUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plan to WInUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Plan to WInUITests/Pods-Plan to WInUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4D10F15463FCD042CA2C26FC /* Pods-Plan to WInTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plan to WInTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Plan to WInTests/Pods-Plan to WInTests.release.xcconfig"; sourceTree = "<group>"; };
+		7BA479C4A04B50BD896F5B55 /* Pods-Plan to WIn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plan to WIn.release.xcconfig"; path = "Pods/Target Support Files/Pods-Plan to WIn/Pods-Plan to WIn.release.xcconfig"; sourceTree = "<group>"; };
+		827804F33F952A03DAD2FEA6 /* Pods-Plan to WInUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plan to WInUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Plan to WInUITests/Pods-Plan to WInUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		875C283F1FFC0A5A004402F4 /* Plan to WIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Plan to WIn.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		875C28421FFC0A5A004402F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		875C28441FFC0A5A004402F4 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +64,14 @@
 		875C28721FFC0EDF004402F4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		875C28741FFC92E8004402F4 /* CreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
 		875C28761FFC9853004402F4 /* EventTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
+		A93181260C4942C6C46321D1 /* Pods-Plan to WIn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plan to WIn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Plan to WIn/Pods-Plan to WIn.debug.xcconfig"; sourceTree = "<group>"; };
+		AE9F73B5D928CAF4D0F82EAB /* Pods_Plan_to_WInUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plan_to_WInUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCE4C77420013810002B7ADE /* Plan to WIn-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Plan to WIn-Bridging-Header.h"; sourceTree = "<group>"; };
+		BCE4C77520013811002B7ADE /* MKiCloudSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKiCloudSync.h; sourceTree = "<group>"; };
+		BCE4C77620013811002B7ADE /* MKiCloudSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKiCloudSync.m; sourceTree = "<group>"; };
+		BCE4C77820013894002B7ADE /* Plan to WIn.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Plan to WIn.entitlements"; sourceTree = "<group>"; };
+		D2469F8F70C104D964B4E06E /* Pods_Plan_to_WIn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plan_to_WIn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBEA4337A779D01F8CBB9D4D /* Pods-Plan to WInTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plan to WInTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Plan to WInTests/Pods-Plan to WInTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3304F33A2E195DC2935F969F /* Pods_Plan_to_WIn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DCD3EA93B53A2E8571F0869 /* Pods_Plan_to_WInTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,12 +95,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EC6635106A19F7D364761FC /* Pods_Plan_to_WInUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F89CF87F228687EF0C8E307 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D2469F8F70C104D964B4E06E /* Pods_Plan_to_WIn.framework */,
+				15A8735EDFB0D3D7B18A40D1 /* Pods_Plan_to_WInTests.framework */,
+				AE9F73B5D928CAF4D0F82EAB /* Pods_Plan_to_WInUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		875C28361FFC0A5A004402F4 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +119,8 @@
 				875C28561FFC0A5A004402F4 /* Plan to WInTests */,
 				875C28611FFC0A5A004402F4 /* Plan to WInUITests */,
 				875C28401FFC0A5A004402F4 /* Products */,
+				ED753536E8C75B12D71D58CC /* Pods */,
+				5F89CF87F228687EF0C8E307 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +137,8 @@
 		875C28411FFC0A5A004402F4 /* Plan to WIn */ = {
 			isa = PBXGroup;
 			children = (
+				BCE4C77820013894002B7ADE /* Plan to WIn.entitlements */,
+				BCE4C773200137E1002B7ADE /* Cloud */,
 				875C28421FFC0A5A004402F4 /* AppDelegate.swift */,
 				875C28441FFC0A5A004402F4 /* LogInViewController.swift */,
 				875C28701FFC0E61004402F4 /* SignInViewController.swift */,
@@ -137,6 +171,29 @@
 			path = "Plan to WInUITests";
 			sourceTree = "<group>";
 		};
+		BCE4C773200137E1002B7ADE /* Cloud */ = {
+			isa = PBXGroup;
+			children = (
+				BCE4C77520013811002B7ADE /* MKiCloudSync.h */,
+				BCE4C77620013811002B7ADE /* MKiCloudSync.m */,
+				BCE4C77420013810002B7ADE /* Plan to WIn-Bridging-Header.h */,
+			);
+			path = Cloud;
+			sourceTree = "<group>";
+		};
+		ED753536E8C75B12D71D58CC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A93181260C4942C6C46321D1 /* Pods-Plan to WIn.debug.xcconfig */,
+				7BA479C4A04B50BD896F5B55 /* Pods-Plan to WIn.release.xcconfig */,
+				FBEA4337A779D01F8CBB9D4D /* Pods-Plan to WInTests.debug.xcconfig */,
+				4D10F15463FCD042CA2C26FC /* Pods-Plan to WInTests.release.xcconfig */,
+				827804F33F952A03DAD2FEA6 /* Pods-Plan to WInUITests.debug.xcconfig */,
+				3F1824FFDB60A4D6497ADDCA /* Pods-Plan to WInUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,9 +201,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 875C28671FFC0A5A004402F4 /* Build configuration list for PBXNativeTarget "Plan to WIn" */;
 			buildPhases = (
+				DEEC1B31A34BD98C4D759096 /* [CP] Check Pods Manifest.lock */,
 				875C283B1FFC0A5A004402F4 /* Sources */,
 				875C283C1FFC0A5A004402F4 /* Frameworks */,
 				875C283D1FFC0A5A004402F4 /* Resources */,
+				0574B3F0B8C70FEFBDE9094B /* [CP] Embed Pods Frameworks */,
+				73290720A91B169F93460CC7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -161,9 +221,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 875C286A1FFC0A5A004402F4 /* Build configuration list for PBXNativeTarget "Plan to WInTests" */;
 			buildPhases = (
+				4CACAB09EB2171887F2A28F8 /* [CP] Check Pods Manifest.lock */,
 				875C284F1FFC0A5A004402F4 /* Sources */,
 				875C28501FFC0A5A004402F4 /* Frameworks */,
 				875C28511FFC0A5A004402F4 /* Resources */,
+				62E22E709C21565B7CE48F86 /* [CP] Embed Pods Frameworks */,
+				F31AE24DCDC333372DD36629 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -179,9 +242,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 875C286D1FFC0A5A004402F4 /* Build configuration list for PBXNativeTarget "Plan to WInUITests" */;
 			buildPhases = (
+				AE9C98603EA1014921E6800C /* [CP] Check Pods Manifest.lock */,
 				875C285A1FFC0A5A004402F4 /* Sources */,
 				875C285B1FFC0A5A004402F4 /* Frameworks */,
 				875C285C1FFC0A5A004402F4 /* Resources */,
+				1926C02DBDB43AC7A777ED08 /* [CP] Embed Pods Frameworks */,
+				E0D81793E10E0645A86776D2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -205,7 +271,13 @@
 				TargetAttributes = {
 					875C283E1FFC0A5A004402F4 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					875C28521FFC0A5A004402F4 = {
 						CreatedOnToolsVersion = 9.2;
@@ -266,6 +338,158 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0574B3F0B8C70FEFBDE9094B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Plan to WIn/Pods-Plan to WIn-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Plan to WIn/Pods-Plan to WIn-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1926C02DBDB43AC7A777ED08 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Plan to WInUITests/Pods-Plan to WInUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4CACAB09EB2171887F2A28F8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Plan to WInTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		62E22E709C21565B7CE48F86 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Plan to WInTests/Pods-Plan to WInTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73290720A91B169F93460CC7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Plan to WIn/Pods-Plan to WIn-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE9C98603EA1014921E6800C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Plan to WInUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEEC1B31A34BD98C4D759096 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Plan to WIn-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0D81793E10E0645A86776D2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Plan to WInUITests/Pods-Plan to WInUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F31AE24DCDC333372DD36629 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Plan to WInTests/Pods-Plan to WInTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		875C283B1FFC0A5A004402F4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -277,6 +501,7 @@
 				875C28711FFC0E61004402F4 /* SignInViewController.swift in Sources */,
 				875C28771FFC9853004402F4 /* EventTableViewController.swift in Sources */,
 				875C28731FFC0EDF004402F4 /* HomeViewController.swift in Sources */,
+				BCE4C77720013811002B7ADE /* MKiCloudSync.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,14 +665,19 @@
 		};
 		875C28681FFC0A5A004402F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A93181260C4942C6C46321D1 /* Pods-Plan to WIn.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Plan to WIn/Plan to WIn.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69U4WDY98A;
 				INFOPLIST_FILE = "Plan to WIn/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "CMB.Plan-to-WIn";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Plan to WIn/Cloud/Plan to WIn-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -455,14 +685,18 @@
 		};
 		875C28691FFC0A5A004402F4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BA479C4A04B50BD896F5B55 /* Pods-Plan to WIn.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Plan to WIn/Plan to WIn.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69U4WDY98A;
 				INFOPLIST_FILE = "Plan to WIn/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "CMB.Plan-to-WIn";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Plan to WIn/Cloud/Plan to WIn-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -470,6 +704,7 @@
 		};
 		875C286B1FFC0A5A004402F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBEA4337A779D01F8CBB9D4D /* Pods-Plan to WInTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -486,6 +721,7 @@
 		};
 		875C286C1FFC0A5A004402F4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D10F15463FCD042CA2C26FC /* Pods-Plan to WInTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -502,6 +738,7 @@
 		};
 		875C286E1FFC0A5A004402F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 827804F33F952A03DAD2FEA6 /* Pods-Plan to WInUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -517,6 +754,7 @@
 		};
 		875C286F1FFC0A5A004402F4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F1824FFDB60A4D6497ADDCA /* Pods-Plan to WInUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
