@@ -16,11 +16,25 @@ class LogInViewController: UIViewController {
 //        }
 //    }
     
-    @IBOutlet weak var usernameInput: UIStackView!
+    
+    @IBOutlet weak var usernameInput: UITextField!
     @IBOutlet weak var passwordInput: UITextField!
+    @IBOutlet weak var removeText: UITextField!
     
     @IBAction func logInButton(_ sender: Any) {
-        
+        if usernameInput.text != "" || passwordInput.text != "" {
+            let userData = UserDefaults.standard.dictionary(forKey: "logInInfo")
+//            if userData[usernameInput.text] == passwordInput.text! {
+//                
+//            }
+        }else {
+            //creat alert for missing input
+            let alert = UIAlertController(title: "Missing Info", message: "One or more fields are blank", preferredStyle: UIAlertControllerStyle.alert)
+            //add action(s) (buttons)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            //show alert
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     @IBAction func Remove(_ sender: Any) {
