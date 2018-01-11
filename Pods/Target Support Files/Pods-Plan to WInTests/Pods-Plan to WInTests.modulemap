@@ -1,0 +1,6 @@
+framework module Pods_Plan_to_WInTests {
+  umbrella header "Pods-Plan to WInTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

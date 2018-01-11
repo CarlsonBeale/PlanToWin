@@ -21,6 +21,7 @@
 		875C28731FFC0EDF004402F4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875C28721FFC0EDF004402F4 /* HomeViewController.swift */; };
 		875C28751FFC92E8004402F4 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875C28741FFC92E8004402F4 /* CreateEventViewController.swift */; };
 		875C28771FFC9853004402F4 /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875C28761FFC9853004402F4 /* EventTableViewController.swift */; };
+		BC6878A72006FE8000C24F41 /* Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6878A62006FE8000C24F41 /* Name.swift */; };
 		BCE4C77720013811002B7ADE /* MKiCloudSync.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE4C77620013811002B7ADE /* MKiCloudSync.m */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		875C28761FFC9853004402F4 /* EventTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
 		A93181260C4942C6C46321D1 /* Pods-Plan to WIn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plan to WIn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Plan to WIn/Pods-Plan to WIn.debug.xcconfig"; sourceTree = "<group>"; };
 		AE9F73B5D928CAF4D0F82EAB /* Pods_Plan_to_WInUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plan_to_WInUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC6878A62006FE8000C24F41 /* Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Name.swift; sourceTree = "<group>"; };
 		BCE4C77420013810002B7ADE /* Plan to WIn-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Plan to WIn-Bridging-Header.h"; sourceTree = "<group>"; };
 		BCE4C77520013811002B7ADE /* MKiCloudSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKiCloudSync.h; sourceTree = "<group>"; };
 		BCE4C77620013811002B7ADE /* MKiCloudSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKiCloudSync.m; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 		875C28411FFC0A5A004402F4 /* Plan to WIn */ = {
 			isa = PBXGroup;
 			children = (
+				BC6878A52006FE5400C24F41 /* Models */,
 				BCE4C77820013894002B7ADE /* Plan to WIn.entitlements */,
 				BCE4C773200137E1002B7ADE /* Cloud */,
 				875C28421FFC0A5A004402F4 /* AppDelegate.swift */,
@@ -169,6 +172,14 @@
 				875C28641FFC0A5A004402F4 /* Info.plist */,
 			);
 			path = "Plan to WInUITests";
+			sourceTree = "<group>";
+		};
+		BC6878A52006FE5400C24F41 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BC6878A62006FE8000C24F41 /* Name.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		BCE4C773200137E1002B7ADE /* Cloud */ = {
@@ -501,6 +512,7 @@
 				875C28711FFC0E61004402F4 /* SignInViewController.swift in Sources */,
 				875C28771FFC9853004402F4 /* EventTableViewController.swift in Sources */,
 				875C28731FFC0EDF004402F4 /* HomeViewController.swift in Sources */,
+				BC6878A72006FE8000C24F41 /* Name.swift in Sources */,
 				BCE4C77720013811002B7ADE /* MKiCloudSync.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

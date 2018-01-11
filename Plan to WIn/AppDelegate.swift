@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         //MKiCloudSync.start(withPrefix: "sync")
+        
+        let chrisName = Name()
+        chrisName.first = "Chris"
+        chrisName.last = "Zimmerman"
+        
+        let realm = try! Realm()
+        let numberOfChrisNames = realm.objects(Name.self).filter("#first = 'Chris'")
+        print("The number of chris's in the database: \(numberOfChrisNames.count).")
+        try! realm.write {
+            realm.add(chrisName)
+        }
+        print("The number of chris's in the database: \(numberOfChrisNames.count).")
         // Override point for customization after application launch.
         return true
     }
