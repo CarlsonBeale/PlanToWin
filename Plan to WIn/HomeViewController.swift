@@ -10,6 +10,12 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBAction func creatEventButton(_ sender: Any) {
+    }
+    @IBAction func viewEventButton(_ sender: Any) {
+    }
+    @IBAction func contactsButton(_ sender: Any) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

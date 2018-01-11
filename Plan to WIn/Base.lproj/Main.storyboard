@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -138,10 +139,10 @@
             </objects>
             <point key="canvasLocation" x="423" y="92"/>
         </scene>
-        <!--Home-->
+        <!--HomeViewController-->
         <scene sceneID="Gma-JO-wEV">
             <objects>
-                <viewController title="Home" id="sS7-B7-des" customClass="HomeViewController" customModule="Plan_to_WIn" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="HomeViewController" id="sS7-B7-des" customClass="HomeViewController" customModule="Plan_to_WIn" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HWC-JH-SzJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -150,16 +151,26 @@
                                 <rect key="frame" x="133" y="184" width="88" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Create Event"/>
+                                <connections>
+                                    <action selector="creatEventButton:" destination="sS7-B7-des" eventType="touchUpInside" id="XyT-Lf-9gY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1h-ct-Kdu">
                                 <rect key="frame" x="139" y="268" width="76" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="View Event"/>
+                                <connections>
+                                    <action selector="viewEventButton:" destination="sS7-B7-des" eventType="touchUpInside" id="gn5-DE-eYE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zEE-Kn-1JS">
                                 <rect key="frame" x="146" y="348" width="62" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Contacts"/>
+                                <connections>
+                                    <action selector="contactsButton:" destination="sS7-B7-des" eventType="touchUpInside" id="Jvt-Wf-fO5"/>
+                                    <segue destination="qmv-od-4MW" kind="show" id="2Ka-ap-DB6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -170,6 +181,45 @@
             </objects>
             <point key="canvasLocation" x="422" y="809"/>
         </scene>
+        <!--Contacts Table View Controller-->
+        <scene sceneID="qc8-Wd-04z">
+            <objects>
+                <viewController id="qmv-od-4MW" customClass="ContactsTableViewController" customModule="Plan_to_WIn" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ah2-hj-51u">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z0l-I8-uDp">
+                                <rect key="frame" x="16" y="142" width="343" height="505"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellReuseIdentifier" id="4fB-Q5-LJz">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4fB-Q5-LJz" id="Fe7-PC-y1z">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Z0l-I8-uDp" firstAttribute="leading" secondItem="ah2-hj-51u" secondAttribute="leadingMargin" id="9Kv-BB-d94"/>
+                            <constraint firstAttribute="bottom" secondItem="Z0l-I8-uDp" secondAttribute="bottom" constant="20" symbolic="YES" id="Cha-3h-whK"/>
+                            <constraint firstItem="Z0l-I8-uDp" firstAttribute="top" secondItem="0QO-Tk-B5l" secondAttribute="top" constant="78" id="SX4-Yh-wng"/>
+                            <constraint firstItem="Z0l-I8-uDp" firstAttribute="trailing" secondItem="ah2-hj-51u" secondAttribute="trailingMargin" id="y2K-gg-ot8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0QO-Tk-B5l"/>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d8b-zF-kkd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1149.5999999999999" y="807.34632683658174"/>
+        </scene>
         <!--Sign Up-->
         <scene sceneID="eE7-Ib-VCg">
             <objects>
@@ -179,7 +229,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="V8C-Uq-BQ0">
-                                <rect key="frame" x="61" y="88" width="253" height="380"/>
+                                <rect key="frame" x="61" y="132" width="253" height="380"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Mjv-b0-BHD">
                                         <rect key="frame" x="0.0" y="0.0" width="253" height="30"/>
@@ -320,6 +370,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2C7-6q-RIr"/>
+        <segue reference="ih1-gu-Kq9"/>
     </inferredMetricsTieBreakers>
 </document>

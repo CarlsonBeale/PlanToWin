@@ -148,6 +148,7 @@
 				875C28721FFC0EDF004402F4 /* HomeViewController.swift */,
 				875C28741FFC92E8004402F4 /* CreateEventViewController.swift */,
 				875C28761FFC9853004402F4 /* EventTableViewController.swift */,
+				8755F1DF2001411900E7B38F /* ContactsTableViewController.swift */,
 				875C28461FFC0A5A004402F4 /* Main.storyboard */,
 				875C28491FFC0A5A004402F4 /* Assets.xcassets */,
 				875C284B1FFC0A5A004402F4 /* LaunchScreen.storyboard */,
