@@ -169,22 +169,24 @@
                                 <state key="normal" title="Contacts"/>
                                 <connections>
                                     <action selector="contactsButton:" destination="sS7-B7-des" eventType="touchUpInside" id="Jvt-Wf-fO5"/>
-                                    <segue destination="qmv-od-4MW" kind="show" id="2Ka-ap-DB6"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="IXu-gp-IsS"/>
                     </view>
+                    <connections>
+                        <segue destination="qmv-od-4MW" kind="show" identifier="toContactsFromHome" id="Z5R-zN-hMh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5i-wp-nkZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="422" y="809"/>
         </scene>
-        <!--Contacts Table View Controller-->
+        <!--Contacts View Controller-->
         <scene sceneID="qc8-Wd-04z">
             <objects>
-                <viewController id="qmv-od-4MW" customClass="ContactsTableViewController" customModule="Plan_to_WIn" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qmv-od-4MW" customClass="ContactsViewController" customModule="Plan_to_WIn" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ah2-hj-51u">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -193,12 +195,21 @@
                                 <rect key="frame" x="16" y="142" width="343" height="505"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellReuseIdentifier" id="4fB-Q5-LJz">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="PB3-Qg-INs" style="IBUITableViewCellStyleDefault" id="4fB-Q5-LJz">
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4fB-Q5-LJz" id="Fe7-PC-y1z">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PB3-Qg-INs">
+                                                    <rect key="frame" x="15" y="0.0" width="313" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -215,6 +226,9 @@
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="contactListTableView" destination="Z0l-I8-uDp" id="bDx-Sx-jKE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d8b-zF-kkd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

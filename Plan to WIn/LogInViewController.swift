@@ -11,11 +11,11 @@ import UIKit
 class LogInViewController: UIViewController {
   //view userdefaults
     override func viewDidAppear(_ animated: Bool) {
-        for (key, value) in UserDefaults.standard.dictionaryRepresentation() {
-            if key == "logInInfo" || key == "userInfo" {
-                print("\(key) = \(value) \n")
-            }
-        }
+//        for (key, value) in UserDefaults.standard.dictionaryRepresentation() {
+//            if key == "logInInfo" || key == "userInfo" {
+//                print("\(key) = \(value) \n")
+//            }
+//        }
     }
     
     
@@ -23,11 +23,15 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var passwordInput: UITextField!
     @IBOutlet weak var removeText: UITextField!
     
+    var currentUser = String()
+    
     @IBAction func logInButton(_ sender: Any) {
         if usernameInput.text != "" || passwordInput.text != "" {
             if var userData = UserDefaults.standard.dictionary(forKey: "logInInfo") as? [String: String]{
                 if userData[usernameInput.text!] == passwordInput.text! {
+                    currentUser = usernameInput.text!
                     self.performSegue(withIdentifier: "toHomeFromLogIn", sender: sender)
+                    
                 }else {
                     let alert = UIAlertController(title: "Input doesnt match", message: "Wrong username or password", preferredStyle: UIAlertControllerStyle.alert)
                     alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
@@ -49,6 +53,14 @@ class LogInViewController: UIViewController {
         let userDefaults = UserDefaults.standard
         userDefaults.removeObject(forKey: "logInInfo")
         userDefaults.removeObject(forKey: "userInfo")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toHomeFromLogIn" {
+            if let dest = segue.destination as? HomeViewController {
+                dest.currentUser = currentUser
+            }
+        }
     }
     
     override func viewDidLoad() {
