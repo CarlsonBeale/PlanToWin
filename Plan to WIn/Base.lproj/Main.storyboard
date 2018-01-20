@@ -192,7 +192,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z0l-I8-uDp">
-                                <rect key="frame" x="16" y="142" width="343" height="505"/>
+                                <rect key="frame" x="16" y="98" width="343" height="549"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="PB3-Qg-INs" style="IBUITableViewCellStyleDefault" id="4fB-Q5-LJz">
@@ -237,13 +237,13 @@
         <!--Sign Up-->
         <scene sceneID="eE7-Ib-VCg">
             <objects>
-                <viewController title="Sign Up" id="d3G-d5-Uaq" customClass="SignInViewController" customModule="Plan_to_WIn" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Sign Up" id="d3G-d5-Uaq" customClass="SignUpViewController" customModule="Plan_to_WIn" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nhI-Lk-CTa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="V8C-Uq-BQ0">
-                                <rect key="frame" x="61" y="132" width="253" height="380"/>
+                                <rect key="frame" x="61" y="88" width="253" height="380"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Mjv-b0-BHD">
                                         <rect key="frame" x="0.0" y="0.0" width="253" height="30"/>
@@ -384,6 +384,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ih1-gu-Kq9"/>
+        <segue reference="2C7-6q-RIr"/>
     </inferredMetricsTieBreakers>
 </document>

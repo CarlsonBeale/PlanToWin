@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class LogInViewController: UIViewController {
   //view userdefaults
@@ -25,20 +26,19 @@ class LogInViewController: UIViewController {
     
     var currentUser = String()
     
+    let realm = try! Realm()
+    
     @IBAction func logInButton(_ sender: Any) {
         if usernameInput.text != "" || passwordInput.text != "" {
-            if var userData = UserDefaults.standard.dictionary(forKey: "logInInfo") as? [String: String]{
-                if userData[usernameInput.text!] == passwordInput.text! {
-                    currentUser = usernameInput.text!
-                    self.performSegue(withIdentifier: "toHomeFromLogIn", sender: sender)
+            let user = realm.objects(UserInformation.self).filter("#userName = '\(usernameInput.text!)'")
+            if (user.count > 0) {
                     
-                }else {
-                    let alert = UIAlertController(title: "Input doesnt match", message: "Wrong username or password", preferredStyle: UIAlertControllerStyle.alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-                    self.present(alert, animated: true, completion: nil)
-                }
-                
+            }else {
+                let alert = UIAlertController(title: "Input doesnt match", message: "Wrong username or password", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
             }
+            
         }else {
             //creat alert for missing input
             let alert = UIAlertController(title: "Missing Info", message: "One or more fields are blank", preferredStyle: UIAlertControllerStyle.alert)

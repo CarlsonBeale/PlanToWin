@@ -17,13 +17,12 @@
 		875C284D1FFC0A5A004402F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 875C284B1FFC0A5A004402F4 /* LaunchScreen.storyboard */; };
 		875C28581FFC0A5A004402F4 /* Plan_to_WInTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875C28571FFC0A5A004402F4 /* Plan_to_WInTests.swift */; };
 		875C28631FFC0A5A004402F4 /* Plan_to_WInUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875C28621FFC0A5A004402F4 /* Plan_to_WInUITests.swift */; };
-		875C28711FFC0E61004402F4 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875C28701FFC0E61004402F4 /* SignInViewController.swift */; };
+		875C28711FFC0E61004402F4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875C28701FFC0E61004402F4 /* SignUpViewController.swift */; };
 		875C28731FFC0EDF004402F4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875C28721FFC0EDF004402F4 /* HomeViewController.swift */; };
 		875C28751FFC92E8004402F4 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875C28741FFC92E8004402F4 /* CreateEventViewController.swift */; };
 		875C28771FFC9853004402F4 /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875C28761FFC9853004402F4 /* EventTableViewController.swift */; };
 		8789ACA9200B008400F8EBB9 /* UserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789ACA8200B008400F8EBB9 /* UserInformation.swift */; };
 		8789ACAB200B016F00F8EBB9 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789ACAA200B016F00F8EBB9 /* ContactsViewController.swift */; };
-		BC6878A72006FE8000C24F41 /* Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6878A62006FE8000C24F41 /* Name.swift */; };
 		BCE4C77720013811002B7ADE /* MKiCloudSync.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE4C77620013811002B7ADE /* MKiCloudSync.m */; };
 /* End PBXBuildFile section */
 
@@ -63,7 +62,7 @@
 		875C285E1FFC0A5A004402F4 /* Plan to WInUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Plan to WInUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		875C28621FFC0A5A004402F4 /* Plan_to_WInUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plan_to_WInUITests.swift; sourceTree = "<group>"; };
 		875C28641FFC0A5A004402F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		875C28701FFC0E61004402F4 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		875C28701FFC0E61004402F4 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		875C28721FFC0EDF004402F4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		875C28741FFC92E8004402F4 /* CreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
 		875C28761FFC9853004402F4 /* EventTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
@@ -71,7 +70,6 @@
 		8789ACAA200B016F00F8EBB9 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		A93181260C4942C6C46321D1 /* Pods-Plan to WIn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plan to WIn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Plan to WIn/Pods-Plan to WIn.debug.xcconfig"; sourceTree = "<group>"; };
 		AE9F73B5D928CAF4D0F82EAB /* Pods_Plan_to_WInUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plan_to_WInUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BC6878A62006FE8000C24F41 /* Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Name.swift; sourceTree = "<group>"; };
 		BCE4C77420013810002B7ADE /* Plan to WIn-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Plan to WIn-Bridging-Header.h"; sourceTree = "<group>"; };
 		BCE4C77520013811002B7ADE /* MKiCloudSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKiCloudSync.h; sourceTree = "<group>"; };
 		BCE4C77620013811002B7ADE /* MKiCloudSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKiCloudSync.m; sourceTree = "<group>"; };
@@ -148,7 +146,7 @@
 				BCE4C773200137E1002B7ADE /* Cloud */,
 				875C28421FFC0A5A004402F4 /* AppDelegate.swift */,
 				875C28441FFC0A5A004402F4 /* LogInViewController.swift */,
-				875C28701FFC0E61004402F4 /* SignInViewController.swift */,
+				875C28701FFC0E61004402F4 /* SignUpViewController.swift */,
 				875C28721FFC0EDF004402F4 /* HomeViewController.swift */,
 				875C28741FFC92E8004402F4 /* CreateEventViewController.swift */,
 				875C28761FFC9853004402F4 /* EventTableViewController.swift */,
@@ -183,7 +181,6 @@
 			isa = PBXGroup;
 			children = (
 				8789ACA8200B008400F8EBB9 /* UserInformation.swift */,
-				BC6878A62006FE8000C24F41 /* Name.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -515,11 +512,10 @@
 				875C28451FFC0A5A004402F4 /* LogInViewController.swift in Sources */,
 				875C28431FFC0A5A004402F4 /* AppDelegate.swift in Sources */,
 				875C28751FFC92E8004402F4 /* CreateEventViewController.swift in Sources */,
-				875C28711FFC0E61004402F4 /* SignInViewController.swift in Sources */,
+				875C28711FFC0E61004402F4 /* SignUpViewController.swift in Sources */,
 				8789ACA9200B008400F8EBB9 /* UserInformation.swift in Sources */,
 				875C28771FFC9853004402F4 /* EventTableViewController.swift in Sources */,
 				875C28731FFC0EDF004402F4 /* HomeViewController.swift in Sources */,
-				BC6878A72006FE8000C24F41 /* Name.swift in Sources */,
 				BCE4C77720013811002B7ADE /* MKiCloudSync.m in Sources */,
 				8789ACAB200B016F00F8EBB9 /* ContactsViewController.swift in Sources */,
 			);
