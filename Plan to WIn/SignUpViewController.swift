@@ -51,6 +51,8 @@ class SignUpViewController: UIViewController {
         user.userName = username.text!
         user.phoneNumber = phoneNumber.text!
         user.password = password.text!
+        
+        try! realm.write {realm.add(user)}
     }
     
     //check input for errors

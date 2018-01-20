@@ -29,12 +29,18 @@ class LogInViewController: UIViewController {
     let realm = try! Realm()
     
     @IBAction func logInButton(_ sender: Any) {
-        if usernameInput.text != "" || passwordInput.text != "" {
-            let user = realm.objects(UserInformation.self).filter("#userName = '\(usernameInput.text!)'")
-            if (user.count > 0) {
-                    
+        if usernameInput.text != "" && passwordInput.text != "" {
+            let users = realm.objects(UserInformation.self).filter("#userName = '\(usernameInput.text!)'")
+            if users.count > 0 {
+                if users.first?.password == passwordInput.text! {
+                    performSegue(withIdentifier: "toHomeFromLogIn", sender: sender)
+                }else {
+                    let alert = UIAlertController(title: "bad info", message: "Incorrect Username or Password", preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
             }else {
-                let alert = UIAlertController(title: "Input doesnt match", message: "Wrong username or password", preferredStyle: UIAlertControllerStyle.alert)
+                let alert = UIAlertController(title: "bad info", message: "Incorrect Username or Password", preferredStyle: UIAlertControllerStyle.alert)
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
             }
