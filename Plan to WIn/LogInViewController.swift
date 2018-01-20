@@ -10,6 +10,7 @@ import UIKit
 import RealmSwift
 
 class LogInViewController: UIViewController {
+    private var userSession: UserSession? = (UIApplication.shared.delegate as! AppDelegate).userSession
   //view userdefaults
     override func viewDidAppear(_ animated: Bool) {
 //        for (key, value) in UserDefaults.standard.dictionaryRepresentation() {
@@ -57,8 +58,11 @@ class LogInViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toHomeFromLogIn" {
-            if let dest = segue.destination as? HomeViewController {
-                dest.currentUser = currentUser
+            if (segue.destination as? HomeViewController != nil) {
+                let loggedInUser = realm.objects(UserInformation.self).filter("#userName = '\(usernameInput.text!)'").first
+                try! realm.write {
+                    userSession?.loggedInUser = loggedInUser
+                }
             }
         }
     }
