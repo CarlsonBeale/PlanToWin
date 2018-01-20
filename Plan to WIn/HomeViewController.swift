@@ -37,7 +37,7 @@ class HomeViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toContactsFromHome" {
             if let dest = segue.destination as? ContactsViewController {
-                dest.currentUser = currentUser
+                
             }
         }
     }

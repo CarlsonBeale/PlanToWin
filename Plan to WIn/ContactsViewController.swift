@@ -7,23 +7,33 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ContactsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var contactListTableView: UITableView!
     
-    var currentUser = String()
-    
-    var userData: [[String: String]]?
+    private var db: Realm? = try! Realm()
+    private var userSession: UserSession? = (UIApplication.shared.delegate as! AppDelegate).userSession
+    private var userData: Results<UserInformation>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        userData = UserDefaults.standard.array(forKey: "userInfo") as? [[String: String]]
-        userData = userData!.filter { $0["username"] != currentUser }
         
-        contactListTableView.delegate = self
-        contactListTableView.dataSource = self
+        if let userSession = userSession { // success, no worries
+            let loggedInUserName = userSession.loggedInUser!.userName;
+            userData = db!.objects(UserInformation.self).filter("#userName != '\(loggedInUserName)'")
+            
+            contactListTableView.delegate = self
+            contactListTableView.dataSource = self
+        }
+        else {
+            // no user session / return to login screen
+            
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "HomeView") as UIViewController!
+            self.show(vc!, sender: vc)
+            
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,11 +53,7 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = contactListTableView.dequeueReusableCell(withIdentifier: "cell")
         
-        if userData![indexPath.row]["username"] == currentUser {
-            
-        }else {
-            cell?.textLabel?.text = userData![indexPath.row]["firstName"]
-        }
+        cell?.textLabel?.text = userData![indexPath.row]["firstName"] as? String
         
         return cell!
     }

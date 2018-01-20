@@ -13,22 +13,23 @@ import RealmSwift
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var userSession: UserSession?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         //MKiCloudSync.start(withPrefix: "sync")
+        userSession = try! Realm(configuration: Realm.Configuration(inMemoryIdentifier: "UserSession")).objects(UserSession.self).first
         
-        let chrisName = Name()
-        chrisName.first = "Chris"
-        chrisName.last = "Zimmerman"
-        
-        let realm = try! Realm()
-        let numberOfChrisNames = realm.objects(Name.self).filter("#first = 'Chris'")
-        print("The number of chris's in the database: \(numberOfChrisNames.count).")
-        try! realm.write {
-            realm.add(chrisName)
-        }
-        print("The number of chris's in the database: \(numberOfChrisNames.count).")
+//        let chrisName = Name()
+//        chrisName.first = "Chris"
+//        chrisName.last = "Zimmerman"
+//
+//        let realm = try! Realm()
+//        let numberOfChrisNames = realm.objects(Name.self).filter("#first = 'Chris'")
+//        print("The number of chris's in the database: \(numberOfChrisNames.count).")
+//        try! realm.write {
+//            realm.add(chrisName)
+//        }
+//        print("The number of chris's in the database: \(numberOfChrisNames.count).")
         // Override point for customization after application launch.
         return true
     }
