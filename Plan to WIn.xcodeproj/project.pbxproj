@@ -147,7 +147,6 @@
 				BCE4C77820013894002B7ADE /* Plan to WIn.entitlements */,
 				BCE4C773200137E1002B7ADE /* Cloud */,
 				875C28421FFC0A5A004402F4 /* AppDelegate.swift */,
-				8789ACA8200B008400F8EBB9 /* UserInformation.swift */,
 				875C28441FFC0A5A004402F4 /* LogInViewController.swift */,
 				875C28701FFC0E61004402F4 /* SignInViewController.swift */,
 				875C28721FFC0EDF004402F4 /* HomeViewController.swift */,
@@ -183,6 +182,7 @@
 		BC6878A52006FE5400C24F41 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8789ACA8200B008400F8EBB9 /* UserInformation.swift */,
 				BC6878A62006FE8000C24F41 /* Name.swift */,
 			);
 			path = Models;

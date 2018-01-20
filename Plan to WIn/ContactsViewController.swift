@@ -14,9 +14,14 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
     
     var currentUser = String()
     
+    var userData: [[String: String]]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        userData = UserDefaults.standard.array(forKey: "userInfo") as? [[String: String]]
+        userData = userData!.filter { $0["username"] != currentUser }
+        
         contactListTableView.delegate = self
         contactListTableView.dataSource = self
     }
@@ -29,21 +34,21 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var userCount = Int()
-        if let userData = UserDefaults.standard.array(forKey: "userInfo") as? [[String: String]] {
-            userCount = userData.count
-        }
+        
+        userCount = userData!.count
+        
         return userCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = contactListTableView.dequeueReusableCell(withIdentifier: "cell")
-        if let userData = UserDefaults.standard.array(forKey: "userInfo") as? [[String: String]]{
-            if userData[indexPath.row]["username"] == currentUser {
-                
-            }else {
-                cell?.textLabel?.text = userData[indexPath.row]["firstName"]
-            }
+        
+        if userData![indexPath.row]["username"] == currentUser {
+            
+        }else {
+            cell?.textLabel?.text = userData![indexPath.row]["firstName"]
         }
+        
         return cell!
     }
 
