@@ -10,6 +10,7 @@
 		0DCD3EA93B53A2E8571F0869 /* Pods_Plan_to_WInTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A8735EDFB0D3D7B18A40D1 /* Pods_Plan_to_WInTests.framework */; };
 		3304F33A2E195DC2935F969F /* Pods_Plan_to_WIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2469F8F70C104D964B4E06E /* Pods_Plan_to_WIn.framework */; };
 		7EC6635106A19F7D364761FC /* Pods_Plan_to_WInUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9F73B5D928CAF4D0F82EAB /* Pods_Plan_to_WInUITests.framework */; };
+		87479D68201666ED00FA90EB /* EventDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87479D67201666ED00FA90EB /* EventDetails.swift */; };
 		875C28431FFC0A5A004402F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875C28421FFC0A5A004402F4 /* AppDelegate.swift */; };
 		875C28451FFC0A5A004402F4 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875C28441FFC0A5A004402F4 /* LogInViewController.swift */; };
 		875C28481FFC0A5A004402F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 875C28461FFC0A5A004402F4 /* Main.storyboard */; };
@@ -23,7 +24,6 @@
 		875C28771FFC9853004402F4 /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875C28761FFC9853004402F4 /* EventTableViewController.swift */; };
 		8789ACA9200B008400F8EBB9 /* UserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789ACA8200B008400F8EBB9 /* UserInformation.swift */; };
 		8789ACAB200B016F00F8EBB9 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789ACAA200B016F00F8EBB9 /* ContactsViewController.swift */; };
-		BC6878A72006FE8000C24F41 /* Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6878A62006FE8000C24F41 /* Name.swift */; };
 		BCC8E2492012ECEA0077A170 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC8E2482012ECEA0077A170 /* UserSession.swift */; };
 		BCE4C77720013811002B7ADE /* MKiCloudSync.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE4C77620013811002B7ADE /* MKiCloudSync.m */; };
 /* End PBXBuildFile section */
@@ -51,6 +51,7 @@
 		4D10F15463FCD042CA2C26FC /* Pods-Plan to WInTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plan to WInTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Plan to WInTests/Pods-Plan to WInTests.release.xcconfig"; sourceTree = "<group>"; };
 		7BA479C4A04B50BD896F5B55 /* Pods-Plan to WIn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plan to WIn.release.xcconfig"; path = "Pods/Target Support Files/Pods-Plan to WIn/Pods-Plan to WIn.release.xcconfig"; sourceTree = "<group>"; };
 		827804F33F952A03DAD2FEA6 /* Pods-Plan to WInUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plan to WInUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Plan to WInUITests/Pods-Plan to WInUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		87479D67201666ED00FA90EB /* EventDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetails.swift; sourceTree = "<group>"; };
 		875C283F1FFC0A5A004402F4 /* Plan to WIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Plan to WIn.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		875C28421FFC0A5A004402F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		875C28441FFC0A5A004402F4 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -72,7 +73,6 @@
 		8789ACAA200B016F00F8EBB9 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		A93181260C4942C6C46321D1 /* Pods-Plan to WIn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plan to WIn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Plan to WIn/Pods-Plan to WIn.debug.xcconfig"; sourceTree = "<group>"; };
 		AE9F73B5D928CAF4D0F82EAB /* Pods_Plan_to_WInUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plan_to_WInUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BC6878A62006FE8000C24F41 /* Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Name.swift; sourceTree = "<group>"; };
 		BCC8E2482012ECEA0077A170 /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
 		BCE4C77420013810002B7ADE /* Plan to WIn-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Plan to WIn-Bridging-Header.h"; sourceTree = "<group>"; };
 		BCE4C77520013811002B7ADE /* MKiCloudSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKiCloudSync.h; sourceTree = "<group>"; };
@@ -185,8 +185,8 @@
 			isa = PBXGroup;
 			children = (
 				8789ACA8200B008400F8EBB9 /* UserInformation.swift */,
-				BC6878A62006FE8000C24F41 /* Name.swift */,
 				BCC8E2482012ECEA0077A170 /* UserSession.swift */,
+				87479D67201666ED00FA90EB /* EventDetails.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -522,6 +522,7 @@
 				8789ACA9200B008400F8EBB9 /* UserInformation.swift in Sources */,
 				875C28771FFC9853004402F4 /* EventTableViewController.swift in Sources */,
 				BCC8E2492012ECEA0077A170 /* UserSession.swift in Sources */,
+				87479D68201666ED00FA90EB /* EventDetails.swift in Sources */,
 				875C28731FFC0EDF004402F4 /* HomeViewController.swift in Sources */,
 				BCE4C77720013811002B7ADE /* MKiCloudSync.m in Sources */,
 				8789ACAB200B016F00F8EBB9 /* ContactsViewController.swift in Sources */,

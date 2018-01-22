@@ -16,13 +16,15 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
     private var db: Realm? = try! Realm()
     private var userSession: UserSession? = (UIApplication.shared.delegate as! AppDelegate).userSession
     private var userData: Results<UserInformation>?
-    
+    private var currentUser = UserInformation()
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if let userSession = userSession { // success, no worries
             let loggedInUserName = userSession.loggedInUser!.userName;
-            userData = db!.objects(UserInformation.self).filter("#userName != '\(loggedInUserName)'")
+            //userData = db!.objects(UserInformation.self).filter("#userName != '\(loggedInUserName)'")
+            let userData = db!.objects(UserInformation.self).filter("#userName != '\(loggedInUserName)'")
+            currentUser = userData.first!
             
             contactListTableView.delegate = self
             contactListTableView.dataSource = self
@@ -53,8 +55,9 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = contactListTableView.dequeueReusableCell(withIdentifier: "cell")
         
-        cell?.textLabel?.text = userData![indexPath.row]["firstName"] as? String
-        
+        //cell?.textLabel?.text = userData![indexPath.row]["firstName"] as? String
+        //display friends list of user
+        cell?.textLabel?.text = currentUser.friendsList[indexPath.row]
         return cell!
     }
 

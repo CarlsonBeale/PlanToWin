@@ -13,4 +13,5 @@ class UserInformation : Object {
     @objc dynamic var userName = String()
     @objc dynamic var phoneNumber = String()
     @objc dynamic var password = String()
+    @objc dynamic var friendsList = [String]()
 }
