@@ -7,11 +7,14 @@
 //
 
 import RealmSwift
+
 class UserInformation : Object {
+    
     @objc dynamic var firstName = String()
     @objc dynamic var lastName = String()
     @objc dynamic var userName = String()
     @objc dynamic var phoneNumber = String()
     @objc dynamic var password = String()
-    @objc dynamic var friendsList = [String]()
+    
+    var friendsList = List<UserInformation>()
 }
