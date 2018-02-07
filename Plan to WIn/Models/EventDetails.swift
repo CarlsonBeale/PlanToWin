@@ -14,9 +14,9 @@ class EventDetails : Object {
     @objc dynamic var startTime = String()
     @objc dynamic var endTime = String()
     
-    dynamic var invitations = List<UserInformation>()()
+    var invitations = List<UserInformation>()
     
-    dynamic var accepted = List<UserInformation>()
-    dynamic var tentative = List<UserInformation>()
-    dynamic var declined = List<UserInformation>()
+    var accepted = List<UserInformation>()
+    var tentative = List<UserInformation>()
+    var declined = List<UserInformation>()
 }

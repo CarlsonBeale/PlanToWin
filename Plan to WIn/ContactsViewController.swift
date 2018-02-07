@@ -57,7 +57,7 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
         
         //cell?.textLabel?.text = userData![indexPath.row]["firstName"] as? String
         //display friends list of user
-        cell?.textLabel?.text = currentUser.friendsList[indexPath.row]
+        //cell?.textLabel?.text = currentUser.friendsList[]
         return cell!
     }
 

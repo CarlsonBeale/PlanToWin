@@ -18,6 +18,7 @@ class LogInViewController: UIViewController {
 //                print("\(key) = \(value) \n")
 //            }
 //        }
+        
     }
     
     
@@ -76,6 +77,9 @@ class LogInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        try! realm.write {
+            realm.deleteAll()
+        }
     }
     
     override func didReceiveMemoryWarning() {
