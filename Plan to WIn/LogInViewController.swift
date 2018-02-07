@@ -28,11 +28,12 @@ class LogInViewController: UIViewController {
     
     var currentUser = String()
     
-    let realm = try! Realm()
+    private let db = Database()
+    
     
     @IBAction func logInButton(_ sender: Any) {
         if usernameInput.text != "" && passwordInput.text != "" {
-            let users = realm.objects(UserInformation.self).filter("#userName = '\(usernameInput.text!)'")
+            let users = db.allUsers().filter("#userName = '\(usernameInput.text!)'")
             if users.count > 0 {
                 if users.first?.password == passwordInput.text! {
                     performSegue(withIdentifier: "toHomeFromLogIn", sender: sender)
@@ -66,20 +67,16 @@ class LogInViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toHomeFromLogIn" {
             if (segue.destination as? HomeViewController != nil) {
-                let loggedInUser = realm.objects(UserInformation.self).filter("#userName = '\(usernameInput.text!)'").first
-                try! realm.write {
+                let loggedInUser = db.allUsers().filter("#userName = '\(usernameInput.text!)'").first
+                db.write(codeBlock: {
                     userSession?.loggedInUser = loggedInUser
-                }
+                })
             }
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        try! realm.write {
-            realm.deleteAll()
-        }
     }
     
     override func didReceiveMemoryWarning() {

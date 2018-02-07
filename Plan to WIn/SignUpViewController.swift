@@ -23,8 +23,7 @@ class SignUpViewController: UIViewController {
     var logInInfoDict = [String: String]()
     var tempDict = [String: String]()
     
-    let user = UserInformation()
-    let realm = try! Realm()
+    let db = Database()
     
     @IBAction func signUp(_ sender: Any) {
         let error = checkInput()
@@ -46,13 +45,15 @@ class SignUpViewController: UIViewController {
     
     //store user info to realm
     func storeUserInfo() {
+        let user = UserInformation()
+        
         user.firstName = firstName.text!
         user.lastName = lastName.text!
         user.userName = username.text!
         user.phoneNumber = phoneNumber.text!
         user.password = password.text!
         
-        try! realm.write {realm.add(user)}
+        db.addUser(user: user)
     }
     
     //check input for errors
@@ -83,7 +84,7 @@ class SignUpViewController: UIViewController {
     func checkUsername(username: String) -> Bool{
         var usernameError = Bool()
         //if taken
-        let user = realm.objects(UserInformation.self).filter("#userName = '\(username)'")
+        let user = db.allUsers().filter("#userName = '\(username)'")
         if user.count > 0 {
             let usernameAlert = UIAlertController(title: "Used Username", message: "Username already in use", preferredStyle: UIAlertControllerStyle.alert)
             usernameAlert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))

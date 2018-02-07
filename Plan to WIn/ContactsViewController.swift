@@ -13,18 +13,19 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet weak var contactListTableView: UITableView!
     
-    private var db: Realm? = try! Realm()
+    private var db = Database()
     private var userSession: UserSession? = (UIApplication.shared.delegate as! AppDelegate).userSession
     private var userData: Results<UserInformation>?
-    private var currentUser = UserInformation()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if let userSession = userSession { // success, no worries
             let loggedInUserName = userSession.loggedInUser!.userName;
             //userData = db!.objects(UserInformation.self).filter("#userName != '\(loggedInUserName)'")
-            let userData = db!.objects(UserInformation.self).filter("#userName != '\(loggedInUserName)'")
-            currentUser = userData.first!
+            //let userData = db!.objects(UserInformation.self).filter("#userName != '\(loggedInUserName)'")
+            
             
             contactListTableView.delegate = self
             contactListTableView.dataSource = self
