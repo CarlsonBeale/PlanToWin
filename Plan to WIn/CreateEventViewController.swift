@@ -10,26 +10,39 @@ import UIKit
 
 class CreateEventViewController: UIViewController {
 
+    @IBOutlet weak var startTimeTextField: UITextField!
+    let datePicker = UIDatePicker()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        createDatePicker()
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func createDatePicker() {
+        
+        //format
+        datePicker.datePickerMode = .dateAndTime
+        
+        //toolbar
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        //create button item
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
+        toolbar.setItems([doneButton], animated: false)
+        
+        startTimeTextField.inputAccessoryView = toolbar
+        //assign date picker to text field
+        startTimeTextField.inputView = datePicker
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @objc func donePressed() {
+        //format date and time
+        let formatDateTime = DateFormatter()
+        DateFormatter.localizedString(from: datePicker.date, dateStyle: .short, timeStyle: .none)
+        
+        startTimeTextField.text = "\(datePicker.date)"
+        self.view.endEditing(true)
     }
-    */
-
 }
