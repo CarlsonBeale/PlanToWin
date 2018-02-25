@@ -7,11 +7,24 @@
 //
 
 import UIKit
+import RealmSwift
 
 class CreateEventViewController: UIViewController {
 
+    @IBOutlet weak var eventTitleTextField: UITextField!
+    @IBOutlet weak var eventLocationTextField: UITextField!
     @IBOutlet weak var startTimeTextField: UITextField!
+    @IBOutlet weak var endTimeTextField: UITextField!
+    @IBOutlet weak var eventInviteTableView: UITableView!
+    
+    
     let datePicker = UIDatePicker()
+    var activeTextField: UITextField!
+    let db = Database()
+    
+//    //keeping data for saving
+//    var startDate = NSDate
+//    var endDate = NSDate
     
     
     override func viewDidLoad() {
@@ -20,29 +33,39 @@ class CreateEventViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    
     func createDatePicker() {
-        
+
         //format
         datePicker.datePickerMode = .dateAndTime
-        
+
         //toolbar
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
         //create button item
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
         toolbar.setItems([doneButton], animated: false)
-        
+
         startTimeTextField.inputAccessoryView = toolbar
+        endTimeTextField.inputAccessoryView = toolbar
         //assign date picker to text field
         startTimeTextField.inputView = datePicker
+        endTimeTextField.inputView = datePicker
     }
-
-    @objc func donePressed() {
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        activeTextField = textField
+    }
+    
+    @objc func donePressed(time: Bool) {
         //format date and time
-        let formatDateTime = DateFormatter()
-        DateFormatter.localizedString(from: datePicker.date, dateStyle: .short, timeStyle: .none)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .short
         
-        startTimeTextField.text = "\(datePicker.date)"
+        
+        
+        activeTextField.text = dateFormatter.string(from: datePicker.date)
         self.view.endEditing(true)
     }
 }
