@@ -30,6 +30,12 @@ class Database {
         })
     }
     
+    func addEvent(event: EventDetails) {
+        write(codeBlock: {
+            try! Realm(configuration: conf()).add(event)
+        })
+    }
+    
     private func conf() -> Realm.Configuration
     {
         return Realm.Configuration(

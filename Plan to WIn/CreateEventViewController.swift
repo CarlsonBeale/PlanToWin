@@ -11,16 +11,26 @@ import RealmSwift
 
 class CreateEventViewController: UIViewController {
 
+    let datePicker = UIDatePicker()
+    var activeTextField: UITextField!
+    let db = Database()
+    
     @IBOutlet weak var eventTitleTextField: UITextField!
     @IBOutlet weak var eventLocationTextField: UITextField!
     @IBOutlet weak var startTimeTextField: UITextField!
     @IBOutlet weak var endTimeTextField: UITextField!
     @IBOutlet weak var eventInviteTableView: UITableView!
     
-    
-    let datePicker = UIDatePicker()
-    var activeTextField: UITextField!
-    let db = Database()
+    @IBAction func doneButton(_ sender: Any) {
+        let eventCreated = EventDetails()
+        
+        eventCreated.title = eventTitleTextField.text!
+        eventCreated.location = eventLocationTextField.text!
+        eventCreated.startTime = startTimeTextField.text!
+        eventCreated.endTime = endTimeTextField.text!
+        
+        db.addEvent(event: eventCreated)
+    }
     
 //    //keeping data for saving
 //    var startDate = NSDate

@@ -147,42 +147,80 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIj-7Q-rCP">
-                                <rect key="frame" x="133" y="184" width="88" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Create Event"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="Ph5-6T-CQ1">
+                                <rect key="frame" x="143" y="122" width="88" height="180"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIj-7Q-rCP">
+                                        <rect key="frame" x="0.0" y="0.0" width="88" height="30"/>
+                                        <state key="normal" title="Create Event"/>
+                                        <connections>
+                                            <action selector="creatEventButton:" destination="sS7-B7-des" eventType="touchUpInside" id="XyT-Lf-9gY"/>
+                                            <segue destination="vrc-e1-cmv" kind="show" id="ljI-Po-cSJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1h-ct-Kdu">
+                                        <rect key="frame" x="0.0" y="75" width="88" height="30"/>
+                                        <state key="normal" title="View Event"/>
+                                        <connections>
+                                            <action selector="viewEventButton:" destination="sS7-B7-des" eventType="touchUpInside" id="gn5-DE-eYE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zEE-Kn-1JS">
+                                        <rect key="frame" x="0.0" y="150" width="88" height="30"/>
+                                        <state key="normal" title="Contacts"/>
+                                        <connections>
+                                            <action selector="contactsButton:" destination="sS7-B7-des" eventType="touchUpInside" id="Jvt-Wf-fO5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JQc-xo-cE2">
+                                <rect key="frame" x="42" y="340" width="291" height="153"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="lsJ-fr-Ffn" style="IBUITableViewCellStyleDefault" id="J1A-Zn-s3F">
+                                        <rect key="frame" x="0.0" y="28" width="291" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="J1A-Zn-s3F" id="Hu8-AT-ID5">
+                                            <rect key="frame" x="0.0" y="0.0" width="291" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lsJ-fr-Ffn">
+                                                    <rect key="frame" x="15" y="0.0" width="261" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
-                                    <action selector="creatEventButton:" destination="sS7-B7-des" eventType="touchUpInside" id="XyT-Lf-9gY"/>
-                                    <segue destination="vrc-e1-cmv" kind="show" id="ljI-Po-cSJ"/>
+                                    <outlet property="dataSource" destination="sS7-B7-des" id="0cX-2M-dUQ"/>
+                                    <outlet property="delegate" destination="sS7-B7-des" id="MBQ-zL-akF"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1h-ct-Kdu">
-                                <rect key="frame" x="139" y="268" width="76" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="View Event"/>
-                                <connections>
-                                    <action selector="viewEventButton:" destination="sS7-B7-des" eventType="touchUpInside" id="gn5-DE-eYE"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zEE-Kn-1JS">
-                                <rect key="frame" x="146" y="348" width="62" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Contacts"/>
-                                <connections>
-                                    <action selector="contactsButton:" destination="sS7-B7-des" eventType="touchUpInside" id="Jvt-Wf-fO5"/>
-                                </connections>
-                            </button>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ph5-6T-CQ1" firstAttribute="centerX" secondItem="JQc-xo-cE2" secondAttribute="centerX" id="Aj0-Kg-NXE"/>
+                            <constraint firstItem="JQc-xo-cE2" firstAttribute="leading" secondItem="IXu-gp-IsS" secondAttribute="leading" constant="42" id="CbI-Xl-guL"/>
+                            <constraint firstItem="IXu-gp-IsS" firstAttribute="bottom" secondItem="JQc-xo-cE2" secondAttribute="bottom" constant="174" id="EnC-do-CkS"/>
+                            <constraint firstItem="Ph5-6T-CQ1" firstAttribute="top" secondItem="IXu-gp-IsS" secondAttribute="top" constant="58" id="Vuu-V1-uZK"/>
+                            <constraint firstItem="Ph5-6T-CQ1" firstAttribute="centerX" secondItem="HWC-JH-SzJ" secondAttribute="centerX" id="a8d-9M-49K"/>
+                            <constraint firstItem="JQc-xo-cE2" firstAttribute="top" secondItem="Ph5-6T-CQ1" secondAttribute="bottom" constant="38" id="t3r-IW-quS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="IXu-gp-IsS"/>
                     </view>
                     <connections>
+                        <outlet property="backgroundTableView" destination="JQc-xo-cE2" id="zQd-ku-Du4"/>
                         <segue destination="wkH-Xq-gjh" kind="show" identifier="toContactsFromHome" id="Z5R-zN-hMh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5i-wp-nkZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="422" y="809"/>
+            <point key="canvasLocation" x="423" y="944"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7bi-bN-30O">
@@ -198,13 +236,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9DQ-8u-pEF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="431" y="1520"/>
+            <point key="canvasLocation" x="423" y="1766"/>
         </scene>
         <!--Creat Event-->
         <scene sceneID="pG6-rQ-jBn">
             <objects>
                 <viewController title="Creat Event" id="Tr0-Yp-bHQ" customClass="CreateEventViewController" customModule="Plan_to_WIn" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3Lu-iE-ItM" customClass="Crea">
+                    <view key="view" contentMode="scaleToFill" id="3Lu-iE-ItM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -274,7 +312,7 @@
                                         <rect key="frame" x="0.0" y="324" width="296" height="184"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" textLabel="R46-BL-0JT" style="IBUITableViewCellStyleDefault" id="15R-nT-a81">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="cell" textLabel="R46-BL-0JT" style="IBUITableViewCellStyleDefault" id="15R-nT-a81">
                                                 <rect key="frame" x="0.0" y="28" width="296" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="15R-nT-a81" id="ScH-E6-wJi">
@@ -308,7 +346,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="v1b-zX-4tW"/>
                     </view>
-                    <navigationItem key="navigationItem" id="c69-5t-eSz"/>
+                    <navigationItem key="navigationItem" title="Create Event" id="c69-5t-eSz">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Wmh-0j-5OS">
+                            <connections>
+                                <action selector="doneButton:" destination="Tr0-Yp-bHQ" id="qFW-nL-h1T"/>
+                                <segue destination="sS7-B7-des" kind="show" id="vu6-n2-KrX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="endTimeTextField" destination="UVj-qD-MpF" id="5FN-VR-7Dq"/>
                         <outlet property="eventInviteTableView" destination="EH7-MC-04A" id="bTO-5w-Ef2"/>
@@ -319,7 +364,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jgz-x5-Esg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1150" y="1520"/>
+            <point key="canvasLocation" x="1123" y="1766"/>
         </scene>
         <!--Friends-->
         <scene sceneID="qc8-Wd-04z">
@@ -378,7 +423,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d8b-zF-kkd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1844" y="806"/>
+            <point key="canvasLocation" x="1825" y="944"/>
         </scene>
         <!--Add Friends-->
         <scene sceneID="ZId-o2-JOt">
@@ -428,7 +473,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="arx-9x-fMR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3512.8000000000002" y="805.54722638680664"/>
+            <point key="canvasLocation" x="3367" y="944"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="eE7-Ib-VCg">
@@ -439,7 +484,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="V8C-Uq-BQ0">
-                                <rect key="frame" x="61" y="88" width="253" height="380"/>
+                                <rect key="frame" x="61" y="132" width="253" height="380"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Mjv-b0-BHD">
                                         <rect key="frame" x="0.0" y="0.0" width="253" height="30"/>
@@ -594,7 +639,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cor-Fe-u2j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1148.8" y="806.89655172413802"/>
+            <point key="canvasLocation" x="1140" y="944"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WV3-eu-VCf">
@@ -612,10 +657,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Mt-jn-OPL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2673" y="806"/>
+            <point key="canvasLocation" x="2610" y="944"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2C7-6q-RIr"/>
+        <segue reference="ljI-Po-cSJ"/>
+        <segue reference="vu6-n2-KrX"/>
+        <segue reference="ih1-gu-Kq9"/>
     </inferredMetricsTieBreakers>
 </document>
