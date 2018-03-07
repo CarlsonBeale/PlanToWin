@@ -29,6 +29,11 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
             
             contactListTableView.delegate = self
             contactListTableView.dataSource = self
+            let backgroundImage: UIImageView!
+            backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+            backgroundImage.image = UIImage(named: (userSession.loggedInUser?.background)!)
+            backgroundImage.contentMode = UIViewContentMode.scaleAspectFill
+            self.view.insertSubview(backgroundImage, at: 0)
         }
         else {
             // no user session / return to login screen

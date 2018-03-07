@@ -15,14 +15,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var userSession: UserSession?
     var db = Database()
-    
+//    let setCount = 1
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         //db.deleteAll()
-        
-        
+
+        let configCheck = Realm.Configuration();
+        do {
+            let fileUrlIs = try schemaVersionAtURL(configCheck.fileURL!)
+            print("schema version \(fileUrlIs)")
+        } catch  {
+            print(error)
+        }
         userSession = try! Realm(configuration: Realm.Configuration(inMemoryIdentifier: "UserSession")).objects(UserSession.self).first
+        
         
 //        let chrisName = Name()
 //        chrisName.first = "Chris"

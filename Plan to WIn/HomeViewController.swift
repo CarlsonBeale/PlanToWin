@@ -7,10 +7,11 @@
 //
 
 import UIKit
-
+import RealmSwift
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    private var userSession: UserSession? = (UIApplication.shared.delegate as! AppDelegate).userSession
+    
     @IBAction func creatEventButton(_ sender: Any) {
     }
     @IBAction func viewEventButton(_ sender: Any) {
@@ -20,17 +21,25 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     @IBOutlet weak var backgroundTableView: UITableView!
     
+     let db = Database()
+    
+    @IBAction func saveBackground(_ sender: Any) {
+        userSession?.loggedInUser?.background = currentImage
+    }
     var currentUser = String()
     
     var imageArray = ["Blue Mac", "Dragon", "Green Lion", "Green Mac", "Jaws Movie", "Master Sword", "Pokeball Cynd", "Weird Tree"]
     var imageArray2 = [#imageLiteral(resourceName: "Blue Mac"), #imageLiteral(resourceName: "Dragon"), #imageLiteral(resourceName: "Green Lion"), #imageLiteral(resourceName: "Green Mac"), #imageLiteral(resourceName: "Jaws Movie"), #imageLiteral(resourceName: "Master Sword"), #imageLiteral(resourceName: "Pokeball Cynd"), #imageLiteral(resourceName: "Weird Tree")]
-    
+    var currentImage = String()
     var backgroundImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //set background to saved image
         backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        
+//        backgroundImage.image = UIImage(named: (userSession?.loggedInUser?.background)!)
+//        backgroundImage.contentMode = UIViewContentMode.scaleAspectFill
+//        self.view.insertSubview(backgroundImage, at: 0)
         // Do any additional setup after loading the view.
     }
     
@@ -48,7 +57,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let image = imageArray2[indexPath.row]
-        backgroundImage.image =  image
+        currentImage = imageArray[indexPath.row]
+        //backgroundImage.image =  image
+        backgroundImage.image = UIImage(named: "\(currentImage).png")
         backgroundImage.contentMode = UIViewContentMode.scaleAspectFill
         self.view.insertSubview(backgroundImage, at: 0)
         
