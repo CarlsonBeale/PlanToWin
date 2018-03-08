@@ -24,7 +24,7 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
         if let userSession = userSession { // success, no worries
             let loggedInUserName = userSession.loggedInUser!.userName;
             //userData = db!.objects(UserInformation.self).filter("#userName != '\(loggedInUserName)'")
-            //let userData = db!.objects(UserInformation.self).filter("#userName != '\(loggedInUserName)'")
+            userData = db.allUsers().filter("#userName != '\(loggedInUserName)'")
             
             
             contactListTableView.delegate = self
@@ -61,7 +61,7 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = contactListTableView.dequeueReusableCell(withIdentifier: "cell")
         
-        //cell?.textLabel?.text = userData![indexPath.row]["firstName"] as? String
+        cell?.textLabel?.text = userData![indexPath.row]["firstName"] as? String
         //display friends list of user
         //cell?.textLabel?.text = currentUser.friendsList[]
         return cell!

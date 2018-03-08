@@ -77,5 +77,9 @@ class CreateEventViewController: UIViewController {
         
         activeTextField.text = dateFormatter.string(from: datePicker.date)
         self.view.endEditing(true)
+        
+        if let navController = self.navigationController {
+            navController.popViewController(animated: true)
+        }
     }
 }

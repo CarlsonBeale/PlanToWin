@@ -15,7 +15,10 @@ class Database {
     }
     
     func write(codeBlock: () -> Void) {
-        try! (try! Realm(configuration: conf())).write(codeBlock)
+        try! (try! Realm(configuration: conf())).write
+        {
+            codeBlock()
+        }
     }
     
     func deleteAll() {
@@ -36,18 +39,18 @@ class Database {
         })
     }
     
-    private func conf() -> Realm.Configuration
+    public func conf() -> Realm.Configuration
     {
         return Realm.Configuration(
             // Set the new schema version. This must be greater than the previously used
             // version (if you've never set a schema version before, the version is 0).
-            schemaVersion: 3,
+            schemaVersion: 4,
             
             // Set the block which will be called automatically when opening a Realm with
             // a schema version lower than the one set above
             migrationBlock: { migration, oldSchemaVersion in
                 // We haven’t migrated anything yet, so oldSchemaVersion == 0
-                if (oldSchemaVersion < 3) {
+                if (oldSchemaVersion < 4) {
                     // Nothing to do!
                     // Realm will automatically detect new properties and removed properties
                     // And will update the schema on disk automatically

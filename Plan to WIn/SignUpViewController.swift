@@ -10,6 +10,7 @@ import UIKit
 import RealmSwift
 
 class SignUpViewController: UIViewController {
+    private var userSession: UserSession? = (UIApplication.shared.delegate as! AppDelegate).userSession
     
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var lastName: UITextField!
@@ -32,7 +33,10 @@ class SignUpViewController: UIViewController {
             //store user info in realm object
             storeUserInfo()
             //go to logIn View
-            self.performSegue(withIdentifier: "SignUp", sender: sender)
+            
+            if let navController = self.navigationController {
+                navController.popViewController(animated: true)
+            }
         }
         
     }

@@ -13,7 +13,7 @@ import RealmSwift
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var userSession: UserSession?
+    var userSession: UserSession? = UserSession()
     var db = Database()
 //    let setCount = 1
     
@@ -28,7 +28,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } catch  {
             print(error)
         }
-        userSession = try! Realm(configuration: Realm.Configuration(inMemoryIdentifier: "UserSession")).objects(UserSession.self).first
+        
+//        let userSessionDb = try! Realm(configuration: Realm.Configuration(inMemoryIdentifier: "UserSession"))
+//        var session = userSessionDb.objects(UserSession.self).first
+//        if (session == nil)
+//        {
+//            session = UserSession()
+//            try! userSessionDb.write {
+//                userSessionDb.add(session!)
+//            }
+//        }
+//
+//        userSession = session;
         
         
 //        let chrisName = Name()

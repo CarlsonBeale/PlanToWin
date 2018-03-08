@@ -25,7 +25,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1DE-cM-zrt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-369" y="93"/>
+            <point key="canvasLocation" x="-279" y="233"/>
         </scene>
         <!--Log In-->
         <scene sceneID="tne-QT-ifu">
@@ -132,12 +132,12 @@
                         <outlet property="passwordInput" destination="6mO-FE-Psn" id="U0A-OS-ZnH"/>
                         <outlet property="removeText" destination="j2b-tK-ldw" id="RHv-Wk-ueG"/>
                         <outlet property="usernameInput" destination="Xhk-E0-pbE" id="MUI-NQ-pUG"/>
-                        <segue destination="sS7-B7-des" kind="show" identifier="toHomeFromLogIn" id="QWg-ZY-PPW"/>
+                        <segue destination="wkH-Xq-gjh" kind="show" identifier="toHomeFromLogIn" id="rwm-rS-gtw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="423" y="92"/>
+            <point key="canvasLocation" x="556" y="234"/>
         </scene>
         <!--Home-->
         <scene sceneID="Gma-JO-wEV">
@@ -155,7 +155,7 @@
                                         <state key="normal" title="Create Event"/>
                                         <connections>
                                             <action selector="creatEventButton:" destination="sS7-B7-des" eventType="touchUpInside" id="XyT-Lf-9gY"/>
-                                            <segue destination="vrc-e1-cmv" kind="show" id="ljI-Po-cSJ"/>
+                                            <segue destination="Tr0-Yp-bHQ" kind="show" id="mfS-pA-yft"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1h-ct-Kdu">
@@ -169,7 +169,7 @@
                                         <rect key="frame" x="0.0" y="150" width="88" height="30"/>
                                         <state key="normal" title="Contacts"/>
                                         <connections>
-                                            <action selector="contactsButton:" destination="sS7-B7-des" eventType="touchUpInside" id="Jvt-Wf-fO5"/>
+                                            <segue destination="qmv-od-4MW" kind="show" id="ahj-Yl-l2n"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -222,30 +222,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IXu-gp-IsS"/>
                     </view>
+                    <navigationItem key="navigationItem" id="C0h-az-FQF"/>
                     <connections>
                         <outlet property="backgroundTableView" destination="JQc-xo-cE2" id="zQd-ku-Du4"/>
-                        <segue destination="wkH-Xq-gjh" kind="show" identifier="toContactsFromHome" id="Z5R-zN-hMh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5i-wp-nkZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="423" y="944"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="7bi-bN-30O">
-            <objects>
-                <navigationController id="vrc-e1-cmv" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="URf-9V-kvY">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="Tr0-Yp-bHQ" kind="relationship" relationship="rootViewController" id="QEB-9w-ia8"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9DQ-8u-pEF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="423" y="1766"/>
+            <point key="canvasLocation" x="1297" y="944"/>
         </scene>
         <!--Creat Event-->
         <scene sceneID="pG6-rQ-jBn">
@@ -359,7 +343,6 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="Wmh-0j-5OS">
                             <connections>
                                 <action selector="doneButton:" destination="Tr0-Yp-bHQ" id="qFW-nL-h1T"/>
-                                <segue destination="sS7-B7-des" kind="show" id="vu6-n2-KrX"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -373,7 +356,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jgz-x5-Esg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1123" y="1766"/>
+            <point key="canvasLocation" x="1297" y="1690"/>
         </scene>
         <!--Friends-->
         <scene sceneID="qc8-Wd-04z">
@@ -403,6 +386,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="zAu-kG-5mu" kind="show" id="25C-ZL-FQv"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -420,11 +406,7 @@
                         <barButtonItem title="Item" id="XJ3-3Y-lPd"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="B5z-t6-rUU">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="OCy-OB-2cz">
-                            <connections>
-                                <segue destination="9da-dc-DD4" kind="presentation" id="sQa-mL-E1A"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="OCy-OB-2cz"/>
                     </navigationItem>
                     <connections>
                         <outlet property="contactListTableView" destination="Z0l-I8-uDp" id="bDx-Sx-jKE"/>
@@ -432,7 +414,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d8b-zF-kkd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1825" y="944"/>
+            <point key="canvasLocation" x="2007" y="943"/>
         </scene>
         <!--Add Friends-->
         <scene sceneID="ZId-o2-JOt">
@@ -482,7 +464,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="arx-9x-fMR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3367" y="944"/>
+            <point key="canvasLocation" x="2718" y="943"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="eE7-Ib-VCg">
@@ -625,12 +607,11 @@
                         <outlet property="password" destination="JDk-uv-HTX" id="m23-ee-3aR"/>
                         <outlet property="phoneNumber" destination="NLc-vU-MrH" id="rvv-SI-owp"/>
                         <outlet property="username" destination="CMR-Lx-5Kn" id="X10-9X-QSN"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="SignUp" id="2C7-6q-RIr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5db-Z1-Enp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1151" y="91"/>
+            <point key="canvasLocation" x="1297" y="233"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dV5-sq-fGM">
@@ -643,35 +624,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="qmv-od-4MW" kind="relationship" relationship="rootViewController" id="mkF-rF-4ZH"/>
+                        <segue destination="sS7-B7-des" kind="relationship" relationship="rootViewController" id="2qD-4c-FhU"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cor-Fe-u2j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1140" y="944"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="WV3-eu-VCf">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9da-dc-DD4" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JQL-Ci-7HG">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="zAu-kG-5mu" kind="relationship" relationship="rootViewController" id="8mJ-05-Am2"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8Mt-jn-OPL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2610" y="944"/>
+            <point key="canvasLocation" x="556" y="943"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="ljI-Po-cSJ"/>
-        <segue reference="vu6-n2-KrX"/>
-        <segue reference="ih1-gu-Kq9"/>
-    </inferredMetricsTieBreakers>
 </document>
