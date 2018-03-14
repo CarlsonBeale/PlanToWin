@@ -53,7 +53,7 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var userCount = Int()
         
-        userCount = userData!.count
+        userCount = (userSession?.loggedInUser?.friendsList.count)!
         
         return userCount
     }
@@ -61,9 +61,9 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = contactListTableView.dequeueReusableCell(withIdentifier: "cell")
         
-        cell?.textLabel?.text = userData![indexPath.row]["firstName"] as? String
+       // cell?.textLabel?.text = userData![indexPath.row]["firstName"] as? String
         //display friends list of user
-        //cell?.textLabel?.text = currentUser.friendsList[]
+        cell?.textLabel?.text = "\(String(describing: userSession?.loggedInUser?.friendsList[indexPath.row].firstName)) \(String(describing: userSession?.loggedInUser?.friendsList[indexPath.row].lastName))"
         return cell!
     }
 

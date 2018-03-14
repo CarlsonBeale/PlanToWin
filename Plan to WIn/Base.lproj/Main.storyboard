@@ -401,11 +401,12 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="zAu-kG-5mu" kind="show" id="25C-ZL-FQv"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="qmv-od-4MW" id="BNA-7L-fu6"/>
+                                    <outlet property="delegate" destination="qmv-od-4MW" id="KrA-Mm-TE4"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -421,7 +422,11 @@
                         <barButtonItem title="Item" id="XJ3-3Y-lPd"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="B5z-t6-rUU">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="OCy-OB-2cz"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="OCy-OB-2cz">
+                            <connections>
+                                <segue destination="zAu-kG-5mu" kind="show" id="xPk-xV-SJi"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="contactListTableView" destination="Z0l-I8-uDp" id="bDx-Sx-jKE"/>
@@ -443,7 +448,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="dXA-pw-2gC" style="IBUITableViewCellStyleDefault" id="hoJ-OJ-ckl">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="dXA-pw-2gC" style="IBUITableViewCellStyleDefault" id="hoJ-OJ-ckl">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hoJ-OJ-ckl" id="ml5-vu-hzj">
@@ -461,6 +466,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="zAu-kG-5mu" id="Dem-fg-Lru"/>
+                                    <outlet property="delegate" destination="zAu-kG-5mu" id="Ucu-Pv-UdD"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -474,7 +483,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="mpZ-Oe-qqv">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="9ks-G9-1Cc"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="QR3-e4-3Zl"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="QR3-e4-3Zl">
+                            <connections>
+                                <action selector="donePressed:" destination="zAu-kG-5mu" id="OJp-9w-a7P"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="addFriends" destination="snQ-Ut-oUo" id="VMc-jk-63w"/>

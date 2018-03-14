@@ -36,7 +36,10 @@ class LogInViewController: UIViewController {
             let users = db.allUsers().filter("#userName = '\(usernameInput.text!)'")
             if users.count > 0 {
                 if users.first?.password == passwordInput.text! {
+                    userSession?.loggedInUser = db.allUsers().filter("#userName == '\(usernameInput.text!)'").first
+                    //print (userSession?.loggedInUser?.userName)
                     performSegue(withIdentifier: "toHomeFromLogIn", sender: sender)
+                    
                 }else {
                     let alert = UIAlertController(title: "bad info", message: "Incorrect Username or Password", preferredStyle: UIAlertControllerStyle.alert)
                     alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
@@ -64,16 +67,17 @@ class LogInViewController: UIViewController {
         userDefaults.removeObject(forKey: "userInfo")
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toHomeFromLogIn" {
-            if (segue.destination as? HomeViewController != nil) {
-                
-                
-                userSession?.loggedInUser = db.allUsers().filter("userName = '\(usernameInput.text!)'").first
-                
-            }
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "toHomeFromLogIn" {
+//            if (segue.destination as? HomeViewController != nil) {
+//
+//
+//                userSession?.loggedInUser = db.allUsers().filter("#userName == '\(usernameInput.text!)'").first
+//                print (userSession?.loggedInUser?.userName)
+//
+//            }
+//        }
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

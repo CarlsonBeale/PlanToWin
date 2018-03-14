@@ -10,7 +10,7 @@ import UIKit
 import RealmSwift
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    private var userSession: UserSession? = (UIApplication.shared.delegate as! AppDelegate).userSession
+    private var userSession: UserSession? { return (UIApplication.shared.delegate as! AppDelegate).userSession; }
     
     @IBAction func creatEventButton(_ sender: Any) {
     }
@@ -37,9 +37,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         //set background to saved image
         backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-//        backgroundImage.image = UIImage(named: (userSession?.loggedInUser?.background)!)
-//        backgroundImage.contentMode = UIViewContentMode.scaleAspectFill
-//        self.view.insertSubview(backgroundImage, at: 0)
+        backgroundImage.image = UIImage(named: (userSession?.loggedInUser?.background)!)
+        backgroundImage.contentMode = UIViewContentMode.scaleAspectFill
+        self.view.insertSubview(backgroundImage, at: 0)
+        print("\(userSession?.loggedInUser?.background) AT HOME")
         // Do any additional setup after loading the view.
     }
     
@@ -56,7 +57,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let image = imageArray2[indexPath.row]
+        //let image = imageArray2[indexPath.row]
         currentImage = imageArray[indexPath.row]
         //backgroundImage.image =  image
         backgroundImage.image = UIImage(named: "\(currentImage).png")
@@ -64,14 +65,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.view.insertSubview(backgroundImage, at: 0)
         
     }
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "toContactsFromHome" {
-//            if let dest = segue.destination as? ContactsViewController {
-//
-//            }
-//        }
-//    }
  
 
 }
