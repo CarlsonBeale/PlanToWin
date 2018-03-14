@@ -65,11 +65,7 @@ std::string format(const char* fmt, std::initializer_list<Printable>);
 } // namespace _impl
 
 namespace util {
-template<typename... Args>
-std::string format(const char* fmt, Args&&... args)
-{
-    return _impl::format(fmt, {_impl::Printable(args)...});
-}
+
 
 } // namespace util
 } // namespace realm
